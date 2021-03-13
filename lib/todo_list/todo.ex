@@ -21,4 +21,8 @@ defmodule TodoList.Todo do
       |> validate_length(:priority, min: 1)
       |> validate_length(:priority, max: 5)
   end
+
+  def get_all do
+    TodoList.Todo |> TodoList.Repo.all()
+  end
 end
